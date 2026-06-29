@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Audience Yield helps micro-creators monetize their audience with digital products. Keep 70% of every sale. No upfront cost." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Audience Yield — Turn Your Audience Into Income" />
+<meta property="og:description" content="We handle the product. You make the sales. Keep 70% of every sale." />
+<meta property="og:url" content="https://audienceyieldhq.com" />
+<title>Audience Yield — Turn Your Audience Into Income</title>
+<link rel="canonical" href="https://audienceyieldhq.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --off-white: #f5f4f0;
+    --gold: #c9a84c;
+    --gold-light: #e8d49a;
+    --gold-dark: #8a6f2e;
+    --text-main: #0a0a0a;
+    --text-muted: #5a5a52;
+    --text-faint: #9a9a8f;
+    --border: rgba(0,0,0,0.08);
+    --border-strong: rgba(0,0,0,0.14);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(245, 244, 240, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    color: var(--gold);
+  }
+
+  .nav-cta {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--black);
+    background: var(--gold);
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+
+  .nav-cta:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 55% at 50% 30%, rgba(201,168,76,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 7vw, 5.2rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    color: var(--black);
+    max-width: 820px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title .accent {
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--black);
+    background: var(--gold);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.18s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: transparent;
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-strong);
+    text-decoration: none;
+    transition: border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold-dark); transform: translateY(-2px); }
+
+  .hero-stat-row {
+    display: flex;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .hero-stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-stat-label {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  /* HOW IT WORKS */
+  .how-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5px;
+    background: var(--border);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .step-card {
+    background: var(--off-white);
+    padding: 2.2rem 2rem;
+    position: relative;
+  }
+
+  .step-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(201,168,76,0.18);
+    line-height: 1;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.04em;
+  }
+
+  .step-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(201,168,76,0.13);
+    border: 1px solid rgba(201,168,76,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .step-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--gold-dark);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .step-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* WHY JOIN */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .why-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.8rem 1.5rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .why-card:hover { border-color: var(--gold-light); transform: translateY(-3px); }
+
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    border-radius: 9px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why-icon svg {
+    width: 19px;
+    height: 19px;
+    stroke: var(--gold-dark);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .why-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.45rem;
+    letter-spacing: -0.01em;
+  }
+
+  .why-desc {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* SPLIT / DIVIDER */
+  .divider {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* REVENUE CALLOUT */
+  .revenue-callout {
+    background: var(--black);
+    border-radius: var(--radius-lg);
+    padding: clamp(2.5rem, 5vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 clamp(1.5rem, 5vw, 4rem);
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(4rem, 8vw, 7rem);
+  }
+
+  .revenue-left .label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .revenue-left .headline {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  .revenue-left .headline .gold { color: var(--gold); }
+
+  .revenue-left p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.65;
+    max-width: 380px;
+  }
+
+  .revenue-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .split-visual {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .split-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .bar-fill {
+    width: 52px;
+    border-radius: 6px 6px 3px 3px;
+  }
+
+  .bar-fill.creator { background: var(--gold); height: 88px; }
+  .bar-fill.ay { background: rgba(255,255,255,0.2); height: 38px; }
+
+  .bar-pct {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+  }
+
+  .bar-who {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* APPLY */
+  .apply-section {
+    text-align: center;
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .apply-section .section-title { margin-bottom: 1rem; }
+  .apply-section .section-sub { margin: 0 auto 2.5rem; }
+
+  .apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-main);
+    background: var(--white);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 0.18s ease;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  .form-group select { appearance: none; cursor: pointer; }
+
+  .form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 15px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.18s ease, transform 0.18s ease;
+    margin-top: 4px;
+  }
+
+  .form-submit:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-1px); }
+
+  .form-note {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* SUCCESS */
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 2.5rem;
+    background: var(--white);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: var(--radius-md);
+  }
+
+  .success-msg .check {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .success-msg .check svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--gold-dark);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .success-msg h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+  }
+
+  .success-msg p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem clamp(1.5rem, 5vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--black);
+    letter-spacing: -0.02em;
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-right {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .revenue-callout { flex-direction: column; align-items: flex-start; }
+    .split-visual { align-self: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Audience<span>Yield</span></a>
+  <a href="#apply" class="nav-cta">Apply as a creator</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">For micro-creators with 10k–100k followers</div>
+  <h1 class="hero-title">Turn your audience into <span class="accent">real income</span></h1>
+  <p class="hero-sub">We match your niche with a digital product your audience already wants. You share a link. You keep 70% of every sale. No upfront cost, no guesswork.</p>
+  <div class="hero-actions">
+    <a href="#apply" class="btn-primary">
+      Apply now
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <a href="#how-it-works" class="btn-secondary">See how it works</a>
+  </div>
+  <div class="hero-stat-row">
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">70%</span>
+      <span class="hero-stat-label">Your cut of sales</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">$0</span>
+      <span class="hero-stat-label">Upfront cost</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">3%+</span>
+      <span class="hero-stat-label">Engagement needed</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">1 link</span>
+      <span class="hero-stat-label">All you share</span>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="how-header">
+    <span class="section-label">The process</span>
+    <h2 class="section-title">How it works</h2>
+    <p class="section-sub">Three steps from application to earning. We do the heavy lifting so you can stay focused on your content.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3 class="step-title">We analyze your audience</h3>
+      <p class="step-desc">After you apply, we study your niche, content, and audience behavior to find the digital product that fits best — without disrupting what you already do.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div class="step-number">02</div>
+      <h3 class="step-title">We build the product</h3>
+      <p class="step-desc">We create a digital product tailored to your audience and set up everything on Whop — your storefront, checkout, and delivery. You don't touch any of it.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <div class="step-number">03</div>
+      <h3 class="step-title">You share, you earn</h3>
+      <p class="step-desc">You post a link. Your audience buys. 70% of every sale lands in your pocket automatically. We stay invisible — this feels native to your brand, not ours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE CALLOUT -->
+<div class="revenue-callout">
+  <div class="revenue-left">
+    <span class="label">Revenue split</span>
+    <p class="headline">You keep <span class="gold">70%</span> of every sale.<br>We take 30%.</p>
+    <p>No monthly fees. No hidden costs. You earn the moment someone buys — paid out directly through Whop to your account.</p>
+  </div>
+  <div class="revenue-right">
+    <div class="split-visual">
+      <div class="split-bar">
+        <div class="bar-fill creator"></div>
+        <div class="bar-pct">70%</div>
+        <div class="bar-who">You</div>
+      </div>
+      <div class="split-bar">
+        <div class="bar-fill ay"></div>
+        <div class="bar-pct" style="color:rgba(255,255,255,0.45)">30%</div>
+        <div class="bar-who">Us</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY JOIN -->
+<section id="why-join">
+  <span class="section-label">Why creators choose us</span>
+  <h2 class="section-title">Built for creators, not marketers</h2>
+  <p class="section-sub">You built an audience by being real. We help you earn from it the same way.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h3 class="why-title">Zero risk</h3>
+      <p class="why-desc">You pay nothing to start. We invest our time and resources — you only share when you're ready.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <h3 class="why-title">Brand-safe</h3>
+      <p class="why-desc">We remain invisible. Your audience sees your name, your voice, your link — not ours. Trust stays with you.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h3 class="why-title">Audience-matched</h3>
+      <p class="why-desc">We don't give every creator the same product. We analyze your niche first, then build what fits.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      </div>
+      <h3 class="why-title">Automatic payouts</h3>
+      <p class="why-desc">Whop handles all payments and delivery. Every sale is tracked and paid out without you chasing anyone.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- APPLY -->
+<div class="apply-section" id="apply">
+  <span class="section-label">Apply now</span>
+  <h2 class="section-title">Ready to monetize your audience?</h2>
+  <p class="section-sub">Tell us a little about yourself. We'll review your profile and reach out within 48 hours if it's a good fit.</p>
+
+  <form class="apply-form" id="applyForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" id="name" placeholder="e.g. Sara Ahmed" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="you@email.com" required />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="handle">Main social media handle</label>
+      <input type="text" id="handle" placeholder="e.g. @yourusername on Instagram" required />
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="platform">Platform</label>
+        <select id="platform">
+          <option value="">Select platform</option>
+          <option>Instagram</option>
+          <option>TikTok</option>
+          <option>YouTube</option>
+          <option>Pinterest</option>
+          <option>Twitter / X</option>
+          <option>Facebook</option>
+          <option>Threads</option>
+          <option>Discord</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="followers">Follower count</label>
+        <select id="followers">
+          <option value="">Select range</option>
+          <option>10,000 – 25,000</option>
+          <option>25,000 – 50,000</option>
+          <option>50,000 – 100,000</option>
+          <option>100,000+</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="niche">What is your niche or content topic?</label>
+      <textarea id="niche" placeholder="e.g. Personal finance tips for young professionals, fitness for busy parents..." required></textarea>
+    </div>
+    <button type="submit" class="form-submit">
+      Submit application
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+    <p class="form-note">We respond within 48 hours. Your information is never shared with third parties.</p>
+  </form>
+
+  <div class="success-msg" id="successMsg">
+    <div class="check">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3>Application received</h3>
+    <p>We'll review your profile and get back to you within 48 hours. Keep creating in the meantime.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Audience<span>Yield</span></div>
+  <div class="footer-right">audienceyieldhq.com &nbsp;·&nbsp; &copy; 2025 Audience Yield. All rights reserved.</div>
+</footer>
+
+<script>
+  document.getElementById('applyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
