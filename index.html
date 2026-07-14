@@ -3,190 +3,223 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Audience Yield helps micro-creators monetize their audience with digital products. Keep 70% of every sale. No upfront cost." />
+<meta name="description" content="A smarter way to monetize your audience with digital products. Keep the revenue from every sale." />
 <meta name="robots" content="index, follow" />
-<meta property="og:title" content="Audience Yield — Turn Your Audience Into Income" />
-<meta property="og:description" content="We handle the product. You make the sales. Keep 70% of every sale." />
+<meta property="og:title" content="Audience Yield — A Smarter Way To Monetize Your Audience" />
+<meta property="og:description" content="We build the digital product. You introduce it to your audience. You keep the revenue." />
 <meta property="og:url" content="https://audienceyieldhq.com" />
-<title>Audience Yield — Turn Your Audience Into Income</title>
+<title>Audience Yield — A Smarter Way To Monetize Your Audience</title>
 <link rel="canonical" href="https://audienceyieldhq.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
-    --black: #0a0a0a;
+    --black: #0c0c0b;
     --white: #ffffff;
-    --off-white: #f5f4f0;
-    --gold: #c9a84c;
-    --gold-light: #e8d49a;
-    --gold-dark: #8a6f2e;
-    --text-main: #0a0a0a;
-    --text-muted: #5a5a52;
-    --text-faint: #9a9a8f;
-    --border: rgba(0,0,0,0.08);
-    --border-strong: rgba(0,0,0,0.14);
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
+    --cream: #f7f6f2;
+    --gold: #b8922a;
+    --gold-light: #d4aa4e;
+    --gold-rich: #c9a23a;
+    --gold-pale: rgba(184,146,42,0.09);
+    --gold-border: rgba(184,146,42,0.2);
+    --text-main: #0c0c0b;
+    --text-body: #3d3d38;
+    --text-muted: #6b6b63;
+    --text-faint: #a0a098;
+    --border: rgba(0,0,0,0.07);
+    --border-mid: rgba(0,0,0,0.10);
+    --border-strong: rgba(0,0,0,0.15);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
-    font-family: 'Inter', sans-serif;
-    background: var(--off-white);
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
     color: var(--text-main);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
   }
-
+ 
   /* NAV */
   nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(245, 244, 240, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(247,246,242,0.93);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--border);
     padding: 0 clamp(1.5rem, 5vw, 4rem);
-    height: 60px;
+    height: 66px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
+ 
   .nav-logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: 1.15rem;
-    letter-spacing: -0.02em;
+    font-size: 1.22rem;
+    letter-spacing: 0.01em;
     color: var(--black);
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
-
-  .nav-logo span {
-    color: var(--gold);
+ 
+  .nav-logo .logo-yield { color: var(--gold-rich); }
+ 
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
   }
-
+ 
+  .nav-link {
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+    letter-spacing: 0.01em;
+  }
+ 
+  .nav-link:hover { color: var(--gold); }
+ 
   .nav-cta {
-    font-size: 0.82rem;
+    font-size: 0.84rem;
     font-weight: 600;
-    color: var(--black);
-    background: var(--gold);
-    padding: 8px 18px;
+    color: var(--white);
+    background: var(--black);
+    padding: 9px 22px;
     border-radius: var(--radius-sm);
     text-decoration: none;
-    letter-spacing: 0.01em;
-    transition: background 0.18s ease, transform 0.18s ease;
+    letter-spacing: 0.015em;
+    transition: background 0.18s ease, transform 0.15s ease;
   }
-
-  .nav-cta:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-1px); }
-
+ 
+  .nav-cta:hover { background: var(--gold-rich); transform: translateY(-1px); }
+ 
   /* HERO */
   .hero {
-    min-height: 90vh;
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
     position: relative;
     overflow: hidden;
   }
-
-  .hero::before {
-    content: '';
+ 
+  .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 55% at 50% 30%, rgba(201,168,76,0.13) 0%, transparent 70%);
+    background:
+      radial-gradient(ellipse 65% 50% at 50% 0%, rgba(184,146,42,0.09) 0%, transparent 68%),
+      radial-gradient(ellipse 38% 32% at 82% 82%, rgba(184,146,42,0.05) 0%, transparent 60%);
     pointer-events: none;
   }
-
-  .hero-eyebrow {
+ 
+  .hero-tag {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    font-size: 0.75rem;
+    gap: 8px;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--gold-dark);
-    background: rgba(201,168,76,0.12);
-    border: 1px solid rgba(201,168,76,0.3);
-    padding: 6px 14px;
+    color: var(--gold);
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-border);
+    padding: 7px 16px;
     border-radius: 100px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
+    position: relative;
   }
-
-  .hero-eyebrow::before {
-    content: '';
-    width: 6px;
-    height: 6px;
+ 
+  .hero-tag-dot {
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    background: var(--gold);
+    background: var(--gold-light);
     flex-shrink: 0;
+    animation: pulse 2.2s ease-in-out infinite;
   }
-
+ 
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.75); }
+  }
+ 
   .hero-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: clamp(2.6rem, 7vw, 5.2rem);
-    line-height: 1.04;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
     color: var(--black);
     max-width: 820px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
+    position: relative;
   }
-
-  .hero-title .accent {
-    color: var(--gold);
-  }
-
+ 
   .hero-sub {
-    font-size: clamp(1rem, 2.2vw, 1.2rem);
-    line-height: 1.65;
-    color: var(--text-muted);
+    font-size: clamp(1rem, 2vw, 1.17rem);
+    line-height: 1.74;
+    color: var(--text-body);
     max-width: 540px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.8rem;
+    font-weight: 300;
+    position: relative;
   }
-
+ 
   .hero-actions {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
   }
-
+ 
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
+    gap: 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.93rem;
     font-weight: 600;
-    color: var(--black);
-    background: var(--gold);
-    padding: 14px 28px;
+    color: var(--white);
+    background: var(--black);
+    padding: 14px 30px;
     border-radius: var(--radius-sm);
     text-decoration: none;
     transition: background 0.18s ease, transform 0.18s ease;
     border: none;
     cursor: pointer;
+    letter-spacing: 0.01em;
   }
-
-  .btn-primary:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-2px); }
-
+ 
+  .btn-primary:hover { background: var(--gold-rich); transform: translateY(-2px); }
+ 
   .btn-secondary {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
+    gap: 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.93rem;
     font-weight: 500;
-    color: var(--text-muted);
+    color: var(--text-body);
     background: transparent;
     padding: 14px 28px;
     border-radius: var(--radius-sm);
@@ -195,689 +228,851 @@
     transition: border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
     cursor: pointer;
   }
-
-  .btn-secondary:hover { border-color: var(--gold); color: var(--gold-dark); transform: translateY(-2px); }
-
-  .hero-stat-row {
-    display: flex;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 4rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--border);
-    width: 100%;
-    max-width: 680px;
-  }
-
-  .hero-stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .hero-stat-value {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--black);
-    letter-spacing: -0.02em;
-  }
-
-  .hero-stat-label {
-    font-size: 0.78rem;
-    color: var(--text-faint);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 500;
-  }
-
+ 
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+ 
   /* SECTIONS */
-  section {
+  .section-wrap {
     padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-    max-width: 1060px;
+    max-width: 1080px;
     margin: 0 auto;
   }
-
-  .section-label {
-    font-size: 0.72rem;
+ 
+  .eyebrow {
+    font-size: 0.69rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--gold-dark);
+    color: var(--gold);
     margin-bottom: 0.8rem;
     display: block;
   }
-
+ 
   .section-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: clamp(1.9rem, 4vw, 2.9rem);
-    letter-spacing: -0.025em;
-    line-height: 1.1;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    letter-spacing: -0.022em;
+    line-height: 1.08;
     color: var(--black);
     margin-bottom: 1rem;
   }
-
+ 
   .section-sub {
     font-size: 1rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 520px;
+    color: var(--text-body);
+    line-height: 1.74;
+    max-width: 500px;
+    font-weight: 300;
   }
-
+ 
   /* HOW IT WORKS */
-  .how-header {
-    margin-bottom: 3.5rem;
-  }
-
+  .steps-header { margin-bottom: 3.5rem; }
+ 
   .steps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5px;
-    background: var(--border);
-    border: 1.5px solid var(--border);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    border: 1px solid var(--border-mid);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    background: var(--border-mid);
+    gap: 1px;
   }
-
+ 
   .step-card {
-    background: var(--off-white);
-    padding: 2.2rem 2rem;
-    position: relative;
+    background: var(--cream);
+    padding: 2.5rem 2.2rem 2.3rem;
+    transition: background 0.2s ease;
   }
-
-  .step-number {
-    font-family: 'Syne', sans-serif;
-    font-size: 3.5rem;
+ 
+  .step-card:hover { background: var(--white); }
+ 
+  .step-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.3rem;
+  }
+ 
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
     font-weight: 800;
-    color: rgba(201,168,76,0.18);
+    color: var(--gold-rich);
     line-height: 1;
-    margin-bottom: 1.2rem;
-    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
   }
-
-  .step-icon {
+ 
+  .step-icon-wrap {
     width: 42px;
     height: 42px;
     border-radius: 10px;
-    background: rgba(201,168,76,0.13);
-    border: 1px solid rgba(201,168,76,0.25);
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-border);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.2rem;
+    flex-shrink: 0;
   }
-
-  .step-icon svg {
+ 
+  .step-icon-wrap svg {
     width: 20px;
     height: 20px;
-    stroke: var(--gold-dark);
+    stroke: var(--gold);
     fill: none;
-    stroke-width: 1.8;
+    stroke-width: 1.7;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-
+ 
   .step-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.12rem;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.65rem;
     letter-spacing: -0.01em;
   }
-
+ 
   .step-desc {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.65;
+    font-size: 0.91rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    font-weight: 300;
   }
-
+ 
+  /* REVENUE BANNER */
+  .revenue-banner {
+    background: var(--black);
+    border-radius: var(--radius-lg);
+    padding: clamp(2.8rem, 6vw, 4.5rem) clamp(2rem, 5vw, 4rem);
+    max-width: 1080px;
+    margin: 0 auto clamp(4rem, 8vw, 7rem);
+    margin-left: clamp(1.5rem, 5vw, 4rem);
+    margin-right: clamp(1.5rem, 5vw, 4rem);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+ 
+  .revenue-banner::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,146,42,0.11) 0%, transparent 70%);
+    pointer-events: none;
+  }
+ 
+  .rev-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.022em;
+    line-height: 1.14;
+    margin-bottom: 1.1rem;
+    max-width: 640px;
+  }
+ 
+  .rev-headline .gold { color: var(--gold-light); }
+ 
+  .rev-body {
+    font-size: 0.96rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.75;
+    max-width: 560px;
+    font-weight: 300;
+    position: relative;
+  }
+ 
   /* WHY JOIN */
+  .why-header { margin-bottom: 3rem; }
+ 
   .why-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1rem;
-    margin-top: 3rem;
   }
-
+ 
   .why-card {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 1.8rem 1.5rem;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    padding: 1.9rem 1.6rem;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
-
-  .why-card:hover { border-color: var(--gold-light); transform: translateY(-3px); }
-
-  .why-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1rem;
-    border-radius: 9px;
-    background: rgba(201,168,76,0.1);
-    border: 1px solid rgba(201,168,76,0.2);
+ 
+  .why-card:hover {
+    border-color: var(--gold-border);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+  }
+ 
+  .why-icon-wrap {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1.1rem;
+    border-radius: 10px;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-border);
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
-  .why-icon svg {
+ 
+  .why-icon-wrap svg {
     width: 19px;
     height: 19px;
-    stroke: var(--gold-dark);
+    stroke: var(--gold);
     fill: none;
-    stroke-width: 1.8;
+    stroke-width: 1.7;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-
+ 
   .why-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.04rem;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
   }
-
+ 
   .why-desc {
-    font-size: 0.87rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.67;
+    font-weight: 300;
   }
-
-  /* SPLIT / DIVIDER */
+ 
+  /* WHO WE PARTNER WITH */
+  .partner-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+ 
+  .partner-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.4rem;
+  }
+ 
+  .partner-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+ 
+  .partner-check svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+ 
+  .partner-text {
+    font-size: 0.94rem;
+    color: var(--text-body);
+    line-height: 1.6;
+    padding-top: 2px;
+  }
+ 
+  /* FAQ */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+  }
+ 
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+ 
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.3rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--black);
+  }
+ 
+  .faq-chevron {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.25s ease;
+  }
+ 
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+ 
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+ 
+  .faq-item.open .faq-answer {
+    max-height: 220px;
+    padding: 0 1.5rem 1.4rem;
+  }
+ 
+  .faq-answer p {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.68;
+    font-weight: 300;
+  }
+ 
+  /* DIVIDER */
   .divider {
     width: 100%;
-    max-width: 1060px;
+    max-width: 1080px;
     margin: 0 auto;
     height: 1px;
     background: var(--border);
   }
-
-  /* REVENUE CALLOUT */
-  .revenue-callout {
-    background: var(--black);
-    border-radius: var(--radius-lg);
-    padding: clamp(2.5rem, 5vw, 4rem);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin: 0 clamp(1.5rem, 5vw, 4rem);
-    max-width: 1060px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: clamp(4rem, 8vw, 7rem);
-  }
-
-  .revenue-left .label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 0.6rem;
-    display: block;
-  }
-
-  .revenue-left .headline {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: -0.025em;
-    line-height: 1.15;
-    margin-bottom: 0.8rem;
-  }
-
-  .revenue-left .headline .gold { color: var(--gold); }
-
-  .revenue-left p {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.65;
-    max-width: 380px;
-  }
-
-  .revenue-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-  }
-
-  .split-visual {
-    display: flex;
-    gap: 10px;
-    align-items: flex-end;
-  }
-
-  .split-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .bar-fill {
-    width: 52px;
-    border-radius: 6px 6px 3px 3px;
-  }
-
-  .bar-fill.creator { background: var(--gold); height: 88px; }
-  .bar-fill.ay { background: rgba(255,255,255,0.2); height: 38px; }
-
-  .bar-pct {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--white);
-  }
-
-  .bar-who {
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.45);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  /* APPLY */
-  .apply-section {
+ 
+  /* APPLY FORM */
+  .apply-wrap {
     text-align: center;
     padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-    max-width: 680px;
+    max-width: 660px;
     margin: 0 auto;
   }
-
-  .apply-section .section-title { margin-bottom: 1rem; }
-  .apply-section .section-sub { margin: 0 auto 2.5rem; }
-
+ 
+  .apply-wrap .section-sub { margin: 0 auto 2.8rem; }
+ 
   .apply-form {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 15px;
     text-align: left;
   }
-
+ 
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 15px;
   }
-
+ 
   .form-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 7px;
   }
-
+ 
   .form-group label {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
     font-weight: 600;
     color: var(--text-muted);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
-
+ 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.92rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.93rem;
+    font-weight: 400;
     color: var(--text-main);
     background: var(--white);
-    border: 1px solid var(--border-strong);
+    border: 1px solid var(--border-mid);
     border-radius: var(--radius-sm);
-    padding: 11px 14px;
+    padding: 12px 15px;
     outline: none;
-    transition: border-color 0.18s ease;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
     width: 100%;
+    line-height: 1.5;
   }
-
+ 
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--text-faint);
+    font-weight: 300;
+  }
+ 
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+    box-shadow: 0 0 0 3px rgba(184,146,42,0.1);
   }
-
-  .form-group textarea { resize: vertical; min-height: 90px; }
-
-  .form-group select { appearance: none; cursor: pointer; }
-
+ 
+  .form-group textarea {
+    resize: vertical;
+    min-height: 95px;
+  }
+ 
+  .form-group select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b6b63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+ 
+  .other-platform-field { display: none; }
+  .other-platform-field.visible { display: flex; }
+ 
   .form-submit {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 9px;
     width: 100%;
     padding: 15px;
-    background: var(--gold);
-    color: var(--black);
-    font-family: 'Inter', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: background 0.18s ease, transform 0.18s ease;
-    margin-top: 4px;
+    margin-top: 6px;
+    letter-spacing: 0.015em;
   }
-
-  .form-submit:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-1px); }
-
-  .form-note {
-    font-size: 0.78rem;
-    color: var(--text-faint);
-    text-align: center;
-    margin-top: 8px;
-  }
-
+ 
+  .form-submit:hover { background: var(--gold-rich); transform: translateY(-1px); }
+ 
   /* SUCCESS */
   .success-msg {
     display: none;
     text-align: center;
-    padding: 2.5rem;
+    padding: 3rem 2rem;
     background: var(--white);
-    border: 1px solid rgba(201,168,76,0.3);
+    border: 1px solid var(--gold-border);
     border-radius: var(--radius-md);
   }
-
-  .success-msg .check {
-    width: 52px;
-    height: 52px;
+ 
+  .success-check {
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
-    background: rgba(201,168,76,0.12);
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-border);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.2rem;
   }
-
-  .success-msg .check svg {
+ 
+  .success-check svg {
     width: 24px;
     height: 24px;
-    stroke: var(--gold-dark);
+    stroke: var(--gold);
     fill: none;
-    stroke-width: 2;
+    stroke-width: 2.2;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-
+ 
   .success-msg h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--black);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
-
+ 
   .success-msg p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+    font-size: 0.92rem;
+    color: var(--text-body);
+    font-weight: 300;
+    line-height: 1.67;
   }
-
+ 
   /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
-    padding: 2rem clamp(1.5rem, 5vw, 4rem);
+    margin-top: clamp(2rem, 4vw, 3.5rem);
+  }
+ 
+  .footer-wrap {
+    padding: 2.2rem clamp(1.5rem, 5vw, 4rem);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
-    max-width: 1060px;
+    max-width: 1080px;
     margin: 0 auto;
   }
-
+ 
   .footer-logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.08rem;
     color: var(--black);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
   }
-
-  .footer-logo span { color: var(--gold); }
-
+ 
+  .footer-logo .logo-yield { color: var(--gold-rich); }
+ 
+  .footer-center {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+ 
+  .footer-center a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+ 
+  .footer-center a:hover { color: var(--gold-rich); }
+ 
   .footer-right {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     color: var(--text-faint);
+    font-weight: 300;
   }
-
+ 
   /* RESPONSIVE */
-  @media (max-width: 600px) {
+  @media (max-width: 580px) {
     .form-row { grid-template-columns: 1fr; }
-    .revenue-callout { flex-direction: column; align-items: flex-start; }
-    .split-visual { align-self: flex-start; }
+    .nav-link { display: none; }
+    .footer-center { display: none; }
+    .revenue-banner { margin-left: 1.2rem; margin-right: 1.2rem; padding: 2.2rem 1.5rem; }
   }
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Audience<span>Yield</span></a>
-  <a href="#apply" class="nav-cta">Apply as a creator</a>
+  <a href="#" class="nav-logo">Audience<span class="logo-yield">Yield</span></a>
+  <div class="nav-right">
+    <a href="#how-it-works" class="nav-link">How it works</a>
+    <a href="#why-join" class="nav-link">Why us</a>
+    <a href="#apply" class="nav-cta">Apply now</a>
+  </div>
 </nav>
-
+ 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-eyebrow">For micro-creators with 10k–100k followers</div>
-  <h1 class="hero-title">Turn your audience into <span class="accent">real income</span></h1>
-  <p class="hero-sub">We match your niche with a digital product your audience already wants. You share a link. You keep 70% of every sale. No upfront cost, no guesswork.</p>
+  <div class="hero-bg"></div>
+  <div class="hero-tag">
+    <span class="hero-tag-dot"></span>
+    Creator Monetization Partnership
+  </div>
+  <h1 class="hero-title">A Smarter Way To Monetize Your Audience</h1>
+  <p class="hero-sub">We identify the right digital product for your audience, build it, and handle everything behind the scenes. You introduce the digital product to your audience and keep the revenue from every sale.</p>
   <div class="hero-actions">
     <a href="#apply" class="btn-primary">
-      Apply now
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      Apply as a creator
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
     <a href="#how-it-works" class="btn-secondary">See how it works</a>
   </div>
-  <div class="hero-stat-row">
-    <div class="hero-stat-item">
-      <span class="hero-stat-value">70%</span>
-      <span class="hero-stat-label">Your cut of sales</span>
-    </div>
-    <div class="hero-stat-item">
-      <span class="hero-stat-value">$0</span>
-      <span class="hero-stat-label">Upfront cost</span>
-    </div>
-    <div class="hero-stat-item">
-      <span class="hero-stat-value">3%+</span>
-      <span class="hero-stat-label">Engagement needed</span>
-    </div>
-    <div class="hero-stat-item">
-      <span class="hero-stat-value">1 link</span>
-      <span class="hero-stat-label">All you share</span>
-    </div>
-  </div>
 </div>
-
+ 
 <!-- HOW IT WORKS -->
-<section id="how-it-works">
-  <div class="how-header">
-    <span class="section-label">The process</span>
+<section class="section-wrap" id="how-it-works">
+  <div class="steps-header">
+    <span class="eyebrow">The process</span>
     <h2 class="section-title">How it works</h2>
-    <p class="section-sub">Three steps from application to earning. We do the heavy lifting so you can stay focused on your content.</p>
+    <p class="section-sub">You focus on your content. We take care of everything else.</p>
   </div>
   <div class="steps-grid">
     <div class="step-card">
-      <div class="step-number">01</div>
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <div class="step-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
       </div>
-      <h3 class="step-title">We analyze your audience</h3>
-      <p class="step-desc">After you apply, we study your niche, content, and audience behavior to find the digital product that fits best — without disrupting what you already do.</p>
+      <h3 class="step-title">We Analyze Your Audience</h3>
+      <p class="step-desc">We study your niche, your content style, and what your audience genuinely responds to. We find the digital product your audience will actually want.</p>
     </div>
     <div class="step-card">
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <div class="step-head">
+        <span class="step-num">2</span>
+        <div class="step-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
       </div>
-      <div class="step-number">02</div>
-      <h3 class="step-title">We build the product</h3>
-      <p class="step-desc">We create a digital product tailored to your audience and set up everything on Whop — your storefront, checkout, and delivery. You don't touch any of it.</p>
+      <h3 class="step-title">We Build The Digital Product</h3>
+      <p class="step-desc">We create the digital product from scratch and handle all setup, checkout, and delivery. We also provide you with a complete done-for-you content strategy, so you know exactly how to sell it to your audience.</p>
     </div>
     <div class="step-card">
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <div class="step-head">
+        <span class="step-num">3</span>
+        <div class="step-icon-wrap">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
       </div>
-      <div class="step-number">03</div>
-      <h3 class="step-title">You share, you earn</h3>
-      <p class="step-desc">You post a link. Your audience buys. 70% of every sale lands in your pocket automatically. We stay invisible — this feels native to your brand, not ours.</p>
+      <h3 class="step-title">You Share It, You Earn Revenue</h3>
+      <p class="step-desc">You follow the strategy to introduce the digital product to your audience in your own voice, and earn revenue from every sale automatically.</p>
     </div>
   </div>
 </section>
-
-<!-- REVENUE CALLOUT -->
-<div class="revenue-callout">
-  <div class="revenue-left">
-    <span class="label">Revenue split</span>
-    <p class="headline">You keep <span class="gold">70%</span> of every sale.<br>We take 30%.</p>
-    <p>No monthly fees. No hidden costs. You earn the moment someone buys — paid out directly through Whop to your account.</p>
-  </div>
-  <div class="revenue-right">
-    <div class="split-visual">
-      <div class="split-bar">
-        <div class="bar-fill creator"></div>
-        <div class="bar-pct">70%</div>
-        <div class="bar-who">You</div>
-      </div>
-      <div class="split-bar">
-        <div class="bar-fill ay"></div>
-        <div class="bar-pct" style="color:rgba(255,255,255,0.45)">30%</div>
-        <div class="bar-who">Us</div>
-      </div>
-    </div>
-  </div>
+ 
+<!-- REVENUE SPLIT -->
+<div class="revenue-banner">
+  <p class="rev-headline">You keep <span class="gold">70%</span> of every sale.</p>
+  <p class="rev-body">No monthly fees. No setup costs. You earn from every sale automatically — paid directly to your account automatically. The more your audience buys, the more you make.</p>
 </div>
-
-<!-- WHY JOIN -->
-<section id="why-join">
-  <span class="section-label">Why creators choose us</span>
-  <h2 class="section-title">Built for creators, not marketers</h2>
-  <p class="section-sub">You built an audience by being real. We help you earn from it the same way.</p>
+ 
+<!-- WHY CREATORS CHOOSE US -->
+<section class="section-wrap" id="why-join">
+  <div class="why-header">
+    <span class="eyebrow">Why creators choose us</span>
+    <h2 class="section-title">Built around your audience</h2>
+    <p class="section-sub">Every decision we make is designed to protect your relationship with your audience.</p>
+  </div>
   <div class="why-grid">
     <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="why-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
-      <h3 class="why-title">Zero risk</h3>
-      <p class="why-desc">You pay nothing to start. We invest our time and resources — you only share when you're ready.</p>
+      <h3 class="why-title">Zero financial risk</h3>
+      <p class="why-desc">You invest nothing to get started. We carry all the production costs. You only participate when you are ready.</p>
     </div>
     <div class="why-card">
-      <div class="why-icon">
+      <div class="why-icon-wrap">
         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
       </div>
-      <h3 class="why-title">Brand-safe</h3>
-      <p class="why-desc">We remain invisible. Your audience sees your name, your voice, your link — not ours. Trust stays with you.</p>
+      <h3 class="why-title">Your brand stays intact</h3>
+      <p class="why-desc">Your audience sees your name, your voice, and your personality — never ours. The trust you built stays with you.</p>
     </div>
     <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <div class="why-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.230-8-5.095 0-5.095 8 0 8 5.097 0 7.135-8 12.23-8z"/></svg>
       </div>
-      <h3 class="why-title">Audience-matched</h3>
-      <p class="why-desc">We don't give every creator the same product. We analyze your niche first, then build what fits.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-      </div>
-      <h3 class="why-title">Automatic payouts</h3>
-      <p class="why-desc">Whop handles all payments and delivery. Every sale is tracked and paid out without you chasing anyone.</p>
+      <h3 class="why-title">A long-term partnership</h3>
+      <p class="why-desc">This is not a one-off partnership. We keep building new digital products for your audience, so your revenue keeps growing over time.</p>
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
+<!-- WHO WE PARTNER WITH -->
+<section class="section-wrap">
+  <span class="eyebrow">Who we partner with</span>
+  <h2 class="section-title">Who We Partner With</h2>
+  <p class="section-sub">A few things we look for in every creator we work with.</p>
+  <div class="partner-list">
+    <div class="partner-item">
+      <div class="partner-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <p class="partner-text">You have a loyal audience with a strong engagement rate</p>
+    </div>
+    <div class="partner-item">
+      <div class="partner-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <p class="partner-text">Your followers genuinely trust your recommendations</p>
+    </div>
+    <div class="partner-item">
+      <div class="partner-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <p class="partner-text">You create content consistently in a specific niche</p>
+    </div>
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- FAQ -->
+<section class="section-wrap">
+  <span class="eyebrow">Questions</span>
+  <h2 class="section-title">FAQ</h2>
+  <div class="faq-list" id="faqList">
+    <div class="faq-item">
+      <button class="faq-question" type="button">
+        Do I need a certain number of followers to apply?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer"><p>No specific number is required. We care more about engagement and how much your audience trusts you than raw follower count.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" type="button">
+        Do I need to pay anything to join?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer"><p>No. We handle all production costs — you never pay anything to get started.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" type="button">
+        How and when do I get paid?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer"><p>You are paid automatically. When someone from your audience buys, your share of the revenue goes directly to your account — no invoicing, no manual steps.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" type="button">
+        Why digital products?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer"><p>No inventory, no shipping, no customer service — just a simple way to earn from your audience with virtually no overhead.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
 <!-- APPLY -->
-<div class="apply-section" id="apply">
-  <span class="section-label">Apply now</span>
-  <h2 class="section-title">Ready to monetize your audience?</h2>
-  <p class="section-sub">Tell us a little about yourself. We'll review your profile and reach out within 48 hours if it's a good fit.</p>
-
+<div class="apply-wrap" id="apply">
+  <span class="eyebrow">Apply now</span>
+  <h2 class="section-title">Ready to work together?</h2>
+  <p class="section-sub">Tell us about yourself and your audience.</p>
+ 
   <form class="apply-form" id="applyForm">
     <div class="form-row">
       <div class="form-group">
-        <label for="name">Your name</label>
-        <input type="text" id="name" placeholder="e.g. Sara Ahmed" required />
+        <label for="fname">Your name</label>
+        <input type="text" id="fname" name="name" placeholder="Full name" required />
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" id="email" placeholder="you@email.com" required />
+        <input type="email" id="email" name="email" placeholder="you@email.com" required />
       </div>
     </div>
     <div class="form-group">
-      <label for="handle">Main social media handle</label>
-      <input type="text" id="handle" placeholder="e.g. @yourusername on Instagram" required />
+      <label for="handle">Social media handle</label>
+      <input type="text" id="handle" name="handle" placeholder="e.g. @yourcreatorhandle" required />
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label for="platform">Platform</label>
-        <select id="platform">
+        <label for="platform">Primary platform</label>
+        <select id="platform" name="platform" onchange="handlePlatformChange(this)">
           <option value="">Select platform</option>
-          <option>Instagram</option>
-          <option>TikTok</option>
-          <option>YouTube</option>
-          <option>Pinterest</option>
-          <option>Twitter / X</option>
-          <option>Facebook</option>
-          <option>Threads</option>
-          <option>Discord</option>
-          <option>Other</option>
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">TikTok</option>
+          <option value="YouTube">YouTube</option>
+          <option value="Pinterest">Pinterest</option>
+          <option value="Twitter / X">Twitter / X</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Threads">Threads</option>
+          <option value="Discord">Discord</option>
+          <option value="Other">Other</option>
         </select>
       </div>
       <div class="form-group">
         <label for="followers">Follower count</label>
-        <select id="followers">
+        <select id="followers" name="followers">
           <option value="">Select range</option>
+          <option>Under 10,000</option>
           <option>10,000 – 25,000</option>
           <option>25,000 – 50,000</option>
           <option>50,000 – 100,000</option>
-          <option>100,000+</option>
+          <option>100,000 – 500,000</option>
+          <option>500,000+</option>
         </select>
       </div>
     </div>
+    <div class="form-group other-platform-field" id="otherPlatformGroup">
+      <label for="otherPlatform">Please specify your platform</label>
+      <input type="text" id="otherPlatform" name="other_platform" placeholder="e.g. Substack, Twitch, LinkedIn..." />
+    </div>
     <div class="form-group">
-      <label for="niche">What is your niche or content topic?</label>
-      <textarea id="niche" placeholder="e.g. Personal finance tips for young professionals, fitness for busy parents..." required></textarea>
+      <label for="niche">Your niche or content topic</label>
+      <textarea id="niche" name="niche" placeholder="Describe what you create content about and who your audience is..." required></textarea>
     </div>
     <button type="submit" class="form-submit">
       Submit application
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </button>
-    <p class="form-note">We respond within 48 hours. Your information is never shared with third parties.</p>
   </form>
-
+ 
   <div class="success-msg" id="successMsg">
-    <div class="check">
+    <div class="success-check">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
     </div>
     <h3>Application received</h3>
-    <p>We'll review your profile and get back to you within 48 hours. Keep creating in the meantime.</p>
+    <p>We will be in touch within 48 hours.</p>
   </div>
 </div>
-
+ 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Audience<span>Yield</span></div>
-  <div class="footer-right">audienceyieldhq.com &nbsp;·&nbsp; &copy; 2025 Audience Yield. All rights reserved.</div>
+  <div class="footer-wrap">
+    <div class="footer-logo">Audience<span class="logo-yield">Yield</span></div>
+    <div class="footer-center">
+      Questions? <a href="mailto:partnerships@audienceyieldhq.com">partnerships@audienceyieldhq.com</a>
+    </div>
+    <div class="footer-right">&copy; 2026 Audience Yield. All rights reserved.</div>
+  </div>
 </footer>
-
+ 
 <script>
+  function handlePlatformChange(select) {
+    var group = document.getElementById('otherPlatformGroup');
+    if (select.value === 'Other') {
+      group.classList.add('visible');
+      document.getElementById('otherPlatform').required = true;
+    } else {
+      group.classList.remove('visible');
+      document.getElementById('otherPlatform').required = false;
+    }
+  }
+ 
   document.getElementById('applyForm').addEventListener('submit', function(e) {
     e.preventDefault();
+ 
+    // Let the browser run native validation (required fields, email format, etc.)
+    if (!this.checkValidity()) {
+      this.reportValidity();
+      return;
+    }
+ 
     this.style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-    document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    var msg = document.getElementById('successMsg');
+    msg.style.display = 'block';
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
-
+ 
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!wasOpen) { item.classList.add('open'); }
+    });
+  });
+ 
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
       var target = document.querySelector(this.getAttribute('href'));
@@ -888,6 +1083,7 @@
     });
   });
 </script>
-
+ 
 </body>
 </html>
+ 
