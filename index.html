@@ -328,10 +328,14 @@
   .step-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.12rem;
+    line-height: 1.3;
     font-weight: 700;
     color: var(--black);
     margin-bottom: 0.65rem;
     letter-spacing: -0.01em;
+    min-height: calc(1.12rem * 1.3 * 2);
+    display: flex;
+    align-items: flex-start;
   }
  
   .step-desc {
@@ -854,6 +858,7 @@
  
 <!-- REVENUE SPLIT -->
 <div class="revenue-banner">
+  <span class="eyebrow">Revenue split</span>
   <p class="rev-headline">You keep <span class="gold">70%</span> of every sale.</p>
   <p class="rev-body">No monthly fees. No setup costs. You earn from every sale automatically — paid directly to your account automatically. The more your audience buys, the more you make.</p>
 </div>
@@ -904,7 +909,7 @@
     </div>
     <div class="partner-item">
       <div class="partner-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <p class="partner-text">Your followers genuinely trust your recommendations</p>
+      <p class="partner-text">Your audience genuinely trusts your recommendations</p>
     </div>
     <div class="partner-item">
       <div class="partner-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -922,10 +927,10 @@
   <div class="faq-list" id="faqList">
     <div class="faq-item">
       <button class="faq-question" type="button">
-        Do I need a certain number of followers to apply?
+        Do I need a certain audience size to apply?
         <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <div class="faq-answer"><p>No specific number is required. We care more about engagement and how much your audience trusts you than raw follower count.</p></div>
+      <div class="faq-answer"><p>No specific number is required. We care more about engagement and how much your audience trusts you than raw audience size.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" type="button">
@@ -959,7 +964,7 @@
   <h2 class="section-title">Ready to work together?</h2>
   <p class="section-sub">Tell us about yourself and your audience.</p>
  
-  <form class="apply-form" id="applyForm">
+  <form class="apply-form" id="applyForm" action="https://formspree.io/f/xojobapd" method="POST">
     <div class="form-row">
       <div class="form-group">
         <label for="fname">Your name</label>
@@ -967,45 +972,44 @@
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="you@email.com" required />
+        <input type="email" id="email" name="email" placeholder="you@email.com" pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" required />
       </div>
     </div>
     <div class="form-group">
-      <label for="handle">Social media handle</label>
-      <input type="text" id="handle" name="handle" placeholder="e.g. @yourcreatorhandle" required />
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="platform">Primary platform</label>
-        <select id="platform" name="platform" onchange="handlePlatformChange(this)">
-          <option value="">Select platform</option>
-          <option value="Instagram">Instagram</option>
-          <option value="TikTok">TikTok</option>
-          <option value="YouTube">YouTube</option>
-          <option value="Pinterest">Pinterest</option>
-          <option value="Twitter / X">Twitter / X</option>
-          <option value="Facebook">Facebook</option>
-          <option value="Threads">Threads</option>
-          <option value="Discord">Discord</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="followers">Follower count</label>
-        <select id="followers" name="followers">
-          <option value="">Select range</option>
-          <option>Under 10,000</option>
-          <option>10,000 – 25,000</option>
-          <option>25,000 – 50,000</option>
-          <option>50,000 – 100,000</option>
-          <option>100,000 – 500,000</option>
-          <option>500,000+</option>
-        </select>
-      </div>
+      <label for="platform">Primary platform</label>
+      <select id="platform" name="platform" onchange="handlePlatformChange(this)" required>
+        <option value="">Select platform</option>
+        <option value="Instagram">Instagram</option>
+        <option value="TikTok">TikTok</option>
+        <option value="YouTube">YouTube</option>
+        <option value="Pinterest">Pinterest</option>
+        <option value="Twitter / X">Twitter / X</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Threads">Threads</option>
+        <option value="Discord">Discord</option>
+        <option value="Blog / Website">Blog / Website</option>
+        <option value="Other">Other</option>
+      </select>
     </div>
     <div class="form-group other-platform-field" id="otherPlatformGroup">
       <label for="otherPlatform">Please specify your platform</label>
-      <input type="text" id="otherPlatform" name="other_platform" placeholder="e.g. Substack, Twitch, LinkedIn..." />
+      <input type="text" id="otherPlatform" name="other_platform" placeholder="e.g. Substack, Twitch, LinkedIn..." oninput="updateLinkField()" />
+    </div>
+    <div class="form-group">
+      <label for="handle" id="linkLabel">Link to your profile</label>
+      <input type="url" id="handle" name="link" placeholder="paste your link here" required />
+    </div>
+    <div class="form-group">
+      <label for="followers">Audience size</label>
+      <select id="followers" name="audience_size" required>
+        <option value="">Select range</option>
+        <option>Under 10,000</option>
+        <option>10,000 – 25,000</option>
+        <option>25,000 – 50,000</option>
+        <option>50,000 – 100,000</option>
+        <option>100,000 – 500,000</option>
+        <option>500,000+</option>
+      </select>
     </div>
     <div class="form-group">
       <label for="niche">Your niche or content topic</label>
@@ -1038,6 +1042,19 @@
 </footer>
  
 <script>
+  var linkFieldMap = {
+    'Instagram':      { label: 'Link to your Instagram profile',   placeholder: 'instagram.com/yourusername' },
+    'TikTok':         { label: 'Link to your TikTok profile',      placeholder: 'tiktok.com/@yourusername' },
+    'YouTube':        { label: 'Link to your YouTube channel',     placeholder: 'youtube.com/@yourchannel' },
+    'Pinterest':      { label: 'Link to your Pinterest profile',   placeholder: 'pinterest.com/yourusername' },
+    'Twitter / X':    { label: 'Link to your Twitter / X profile', placeholder: 'x.com/yourusername' },
+    'Facebook':       { label: 'Link to your Facebook page',       placeholder: 'facebook.com/yourpage' },
+    'Threads':        { label: 'Link to your Threads profile',     placeholder: 'threads.net/@yourusername' },
+    'Discord':        { label: 'Link to your Discord server',      placeholder: 'discord.gg/yourserver' },
+    'Blog / Website': { label: 'Link to your website',             placeholder: 'yourwebsite.com' },
+    'Other':          { label: 'Link to your profile',             placeholder: 'paste your link here' }
+  };
+ 
   function handlePlatformChange(select) {
     var group = document.getElementById('otherPlatformGroup');
     if (select.value === 'Other') {
@@ -1047,21 +1064,66 @@
       group.classList.remove('visible');
       document.getElementById('otherPlatform').required = false;
     }
+    updateLinkField();
+  }
+ 
+  function updateLinkField() {
+    var platform = document.getElementById('platform').value;
+    var labelEl = document.getElementById('linkLabel');
+    var inputEl = document.getElementById('handle');
+    var otherText = document.getElementById('otherPlatform').value.trim();
+ 
+    if (platform === 'Other' && otherText) {
+      labelEl.textContent = 'Link to your ' + otherText;
+      inputEl.placeholder = 'paste your link here';
+    } else if (linkFieldMap[platform]) {
+      labelEl.textContent = linkFieldMap[platform].label;
+      inputEl.placeholder = linkFieldMap[platform].placeholder;
+    } else {
+      labelEl.textContent = 'Link to your profile';
+      inputEl.placeholder = 'paste your link here';
+    }
   }
  
   document.getElementById('applyForm').addEventListener('submit', function(e) {
     e.preventDefault();
+    var form = this;
  
-    // Let the browser run native validation (required fields, email format, etc.)
-    if (!this.checkValidity()) {
-      this.reportValidity();
+    // Let the browser run native validation (required fields, email format, URL format, etc.)
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
  
-    this.style.display = 'none';
-    var msg = document.getElementById('successMsg');
-    msg.style.display = 'block';
-    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    var submitBtn = form.querySelector('.form-submit');
+    submitBtn.disabled = true;
+ 
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      return response.json().then(function(data) {
+        return { ok: response.ok, data: data };
+      });
+    }).then(function(result) {
+      if (result.ok) {
+        form.style.display = 'none';
+        var msg = document.getElementById('successMsg');
+        msg.style.display = 'block';
+        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        submitBtn.disabled = false;
+        var errorText = 'Please check your details and try again.';
+        if (result.data && result.data.errors && result.data.errors.length) {
+          errorText = result.data.errors.map(function(err) { return err.message; }).join(' ');
+        }
+        alert(errorText);
+      }
+    }).catch(function() {
+      submitBtn.disabled = false;
+      alert('Something went wrong submitting your application. Please check your connection and try again.');
+    });
   });
  
   document.querySelectorAll('.faq-question').forEach(function(btn) {
@@ -1087,3 +1149,4 @@
 </body>
 </html>
  
+
